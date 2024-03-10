@@ -20,6 +20,7 @@ const { title } = Astro.props;
       type="image/svg+xml"
       href="../../public/icon/Favicon-32x32.svg"
     />
+    <link rel="stylesheet" href="../css/particles.css" />
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -41,7 +42,7 @@ const { title } = Astro.props;
     );
   }
   html {
-    background-image: url("../../public/images/sun-green.webp");
+    /* background-image: url("../../public/images/sun-green.webp"); */
     background-size: cover;
     background-position: top;
     font-family: system-ui, sans-serif;
