@@ -4,29 +4,24 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="QuickCalc">
-  <body>
-    <main>
-      <!-- <h1>Welcome to <span class="text-gradient">QuickCalc</span></h1> -->
-      <div id="particles-js"></div>
-
-      <script src="../js/app.js"></script>
-      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
-      ></script>
-      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-    </main>
-  </body>
+  <div id="particles-js">
+    <h1>Welcome to <span class="text-gradient">QuickCalc</span></h1>
+  </div>
 </Layout>
 
 <style>
-  main {
+  body {
+    background: #272c23;
+  }
+  /* main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
+    /* width: 800px; */
+  /* max-width: calc(100% - 2rem);
     color: white;
     font-size: 20px;
     line-height: 1.6;
-  }
+  } */
   .astro-a {
     position: absolute;
     top: -32px;
