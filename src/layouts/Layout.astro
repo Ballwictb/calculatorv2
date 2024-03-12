@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import "../css/particles.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -34,6 +35,7 @@ import "../css/particles.css";
   </head>
 
   <body>
+    <SpeedInsights />
     <slot />
   </body>
 
