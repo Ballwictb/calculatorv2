@@ -1,0 +1,60 @@
+body {
+    background-image: url("./img/collage.jpg");
+    background-repeat: repeat;
+    background-size: 23.75rem;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div {
+    width: 18.75rem;
+    display: inline-block;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7.8125rem;
+    border-radius: 1.875rem;
+    padding: .9375rem;
+    box-shadow: .625rem .625rem .625rem #50a7d9;
+    border: .3125rem solid #000;
+    background-color: #50a7d9;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+h5 {
+    position: fixed;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 1.25rem;
+    margin: .5rem;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+tr {
+    display: flex;
+    width: 18.75rem;
+    height: 4.375rem;
+    justify-content: center;
+}
+
+input {
+    background-color: #fff;
+    border: .0625rem solid #000;
+    width: 15.625rem;
+    height: 3.75rem;
+    border-radius: .625rem;
+    font-size: 1.875rem;
+}
