@@ -1,0 +1,42 @@
+---
+import "../js/script-calc.js";
+---
+
+<div class="calculator">
+  <h1>Calculadora</h1>
+  <table>
+    <tr>
+      <td><input type="text" id="display" disabled /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="C" onclick="clearDisplay(); " /></td>
+      <td><input type="button" value="%" onclick="addToDisplay('%'); " /></td>
+      <td><input type="button" value="^" onclick="addToDisplay('**'); " /></td>
+      <td><input type="button" value="÷" onclick="addToDisplay('/');"  /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" onclick="addToDisplay('7');"  /></td>
+      <td><input type="button" value="8" onclick="addToDisplay('8');"  /></td>
+      <td><input type="button" value="9" onclick="addToDisplay('9');"  /></td>
+      <td><input type="button" value="*" onclick="addToDisplay('*');"  /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" onclick="addToDisplay('4');"  /></td>
+      <td><input type="button" value="5" onclick="addToDisplay('5');"  /></td>
+      <td><input type="button" value="6" onclick="addToDisplay('6');"  /></td>
+      <td><input type="button" value="-" onclick="addToDisplay('-');"  /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" onclick="addToDisplay('1');"  /></td>
+      <td><input type="button" value="2" onclick="addToDisplay('2');"  /></td>
+      <td><input type="button" value="3" onclick="addToDisplay('3');"  /></td>
+      <td><input type="button" value="+" onclick="addToDisplay('+');"  /></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="0" onclick="addToDisplay('0');"  /></td>
+      <td><input type="button" value="." onclick="addToDisplay('.');"  /></td>
+      <td> <input type="button" value="=" onclick="calculate();"  /></td>
+      <td><input type="button" value="DEL" onclick="clearNumber();" /></td>
+    </tr>
+  </table>
+</div>

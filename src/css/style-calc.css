@@ -6,13 +6,13 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-div {
+.calculator {
     width: 18.75rem;
     display: inline-block;
     position: relative;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 7.8125rem;
+    margin-top: .9375rem;
     border-radius: 1.875rem;
     padding: .9375rem;
     box-shadow: .625rem .625rem .625rem #50a7d9;
@@ -26,9 +26,9 @@ h1 {
     font-weight: 600;
 }
 
-h5 {
+/* h5 {
     position: fixed;
-}
+} */
 
 input[type="button"] {
     cursor: pointer;
