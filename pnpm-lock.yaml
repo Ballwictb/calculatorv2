@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^7.3.5
     version: 7.3.5(astro@4.4.15)
+  '@vercel/analytics':
+    specifier: ^1.2.2
+    version: 1.2.2
   astro:
     specifier: ^4.4.15
     version: 4.4.15
