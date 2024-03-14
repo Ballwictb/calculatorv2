@@ -1,7 +1,8 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
 }
+const Calc = "div";
 
 const { title } = Astro.props;
 import "../css/particles.css";
@@ -43,38 +44,126 @@ import SpeedInsights from "@vercel/speed-insights/astro";
   <body>
     <SpeedInsights />
     <slot />
-  </body>
 
-  <style is:global>
-    :root {
-      --accent: 136, 258, 234;
-      --accent-light: 90, 200, 90;
-      --accent-dark: 49, 10, 101;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 40%,
-        #008000 60%
-      );
+    <Calc class="calculator">
+      <h1>icon here</h1>
+      <table>
+        <tr>
+          <td><input type="text" id="display" disabled /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="C" onclick="clearDisplay(); " /></td>
+          <td
+            ><input type="button" value="%" onclick="addToDisplay('%'); " /></td
+          >
+          <td
+            ><input
+              type="button"
+              value="^"
+              onclick="addToDisplay('**'); "
+            /></td
+          >
+          <td><input type="button" value="÷" onclick="addToDisplay('/');"  /></td
+          >
+        </tr>
+        <tr>
+          <td><input type="button" value="7" onclick="addToDisplay('7');"  /></td
+          >
+          <td><input type="button" value="8" onclick="addToDisplay('8');"  /></td
+          >
+          <td><input type="button" value="9" onclick="addToDisplay('9');"  /></td
+          >
+          <td><input type="button" value="x" onclick="addToDisplay('*');"  /></td
+          >
+        </tr>
+        <tr>
+          <td><input type="button" value="4" onclick="addToDisplay('4');"  /></td
+          >
+          <td><input type="button" value="5" onclick="addToDisplay('5');"  /></td
+          >
+          <td><input type="button" value="6" onclick="addToDisplay('6');"  /></td
+          >
+          <td
+            ><input type="button" value="-" onclick="addToDisplay('-'); " /></td
+          >
+        </tr>
+        <tr>
+          <td><input type="button" value="1" onclick="addToDisplay('1');"  /></td
+          >
+          <td><input type="button" value="2" onclick="addToDisplay('2');"  /></td
+          >
+          <td><input type="button" value="3" onclick="addToDisplay('3');"  /></td
+          >
+          <td><input type="button" value="+" onclick="addToDisplay('+');"  /></td
+          >
+        </tr>
+        <tr>
+          <td><input type="button" value="0" onclick="addToDisplay('0');"  /></td
+          >
+          <td><input type="button" value="." onclick="addToDisplay('.');"  /></td
+          >
+          <td> <input type="button" value="=" onclick="calculate(); " /></td>
+          <td><input type="button" value="DEL" onclick="clearNumber();" /></td>
+        </tr>
+      </table>
+    </Calc>
+  </body>
+  <script>
+    function addToDisplay(value) {
+      document.getElementById("display").value += value;
     }
-    html {
-      /* background-image: url("../../public/images/sun-green.webp"); */
-      background-size: cover;
-      background-position: top;
-      font-family: system-ui, sans-serif;
-      /* background: #13151a; */
-      /* background-size: 224px; */
+
+    function calculate() {
+      try {
+        document.getElementById("display").value = eval(
+          document.getElementById("display").value
+        );
+      } catch (error) {
+        document.getElementById("display").value = "Error";
+      }
     }
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
+
+    function clearDisplay() {
+      document.getElementById("display").value = "";
     }
-  </style>
+
+    function clearNumber() {
+      var display = document.getElementById("display");
+      var valor = display.value;
+      display.value = valor.slice(0, -1);
+    }
+  </script>
 </html>
+
+<style is:global>
+  :root {
+    --accent: 136, 258, 234;
+    --accent-light: 90, 200, 90;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 40%,
+      #008000 60%
+    );
+  }
+  html {
+    /* background-image: url("../../public/images/sun-green.webp"); */
+    background-size: cover;
+    background-position: top;
+    font-family: system-ui, sans-serif;
+    /* background: #13151a; */
+    /* background-size: 224px; */
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>

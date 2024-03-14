@@ -12,12 +12,19 @@ body {
     position: relative;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: .9375rem;
+    margin-top: .3125rem;
     border-radius: 1.875rem;
     padding: .9375rem;
-    box-shadow: .625rem .625rem .625rem #50a7d9;
+    /* box-shadow: .625rem .625rem .625rem #50a7d9; */
     border: .3125rem solid #000;
-    background-color: #50a7d9;
+    /* background-color: #50a7d9; */
+    background-image: var(--accent-gradient);
+    --accent: 136, 258, 234;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 40%,
+            #bbcc99 50%);
 }
 
 h1 {

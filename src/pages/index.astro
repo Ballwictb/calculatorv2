@@ -5,11 +5,14 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="QuickCalc">
-  <h1>Welcome to <span class="text-gradient">QuickCalc</span></h1>
   <div id="particles-js"></div>
-  <Calculator />
+  <h1>Welcome to <span class="text-gradient">QuickCalc</span></h1>
 </Layout>
+
 <style>
+  * {
+    scale: 92%;
+  }
   body {
     background: #272c23;
   }
@@ -45,6 +48,7 @@ import Card from "../components/Card.astro";
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 30%;
+    filter: brightness(1.7);
   }
   .instructions {
     background: #13151a;
