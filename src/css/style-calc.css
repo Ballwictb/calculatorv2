@@ -1,6 +1,5 @@
 body {
     transform: scale(97%);
-    background-image: url("./img/collage.jpg");
     background-repeat: repeat;
     background-size: 23.75rem;
     background-attachment: fixed;
@@ -26,16 +25,6 @@ body {
             rgb(var(--accent-light)) 40%,
             #bbcc99 50%);
 }
-
-h1 {
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-}
-
-/* h5 {
-    position: fixed;
-} */
 
 input[type="button"] {
     cursor: pointer;
