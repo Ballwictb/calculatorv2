@@ -1,38 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
 import Calculator from "../components/Calculator.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="QuickCalc">
   <div id="particles-js"></div>
+  <h2 class="instructions">
+    <code>
+      <span class="redS">C</span>
+      <span class="yellowS">></span> Delete 🚦 <span class="redS">%</span>
+      <span class="yellowS">></span>
+       rest 🚦 <span class="redS">**</span>
+      <span class="yellowS">></span> high 🚦 <span class="redS">/</span>
+      <span class="yellowS">></span> divide 🚦 <span class="redS">*</span>
+      <span class="yellowS">></span> multiply 🚦 <span class="redS">-</span>
+      <span class="yellowS">></span>
+       subtract 🚦<span class="redS">+</span>
+      <span class="yellowS">></span> add 🚦<span class="redS">DEL</span>
+      <span class="yellowS">></span>
+       Delete one
+    </code>
+  </h2>
   <h1>Welcome to <span class="text-gradient">QuickCalc</span></h1>
+  <Calculator />
 </Layout>
-
 <style>
   * {
-    scale: 92%;
+    scale: 95%;
   }
   body {
     background: #272c23;
-  }
-  /* main {
-    margin: auto;
-    padding: 1rem;
-    /* width: 800px; */
-  /* max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  } */
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
   }
   h1 {
     font-size: 4rem;
@@ -42,6 +40,16 @@ import Card from "../components/Card.astro";
     margin-bottom: 1em;
     color: #fff;
   }
+  .redS {
+    color: #fe0000;
+    font-size: 1.3em;
+  }
+
+  .yellowS {
+    color: #f8cf03;
+    font-size: 1.3em;
+  }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -51,10 +59,11 @@ import Card from "../components/Card.astro";
     filter: brightness(1.7);
   }
   .instructions {
-    background: #13151a;
+    background: rgba(var(--accent-light), 12%);
+    color: #fff;
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
-    box-shadow: 1px 1px 10px #fff;
+    box-shadow: 1px 1px 6px #272c23;
     padding: 1.5rem;
     text-align: center;
     border-radius: 8px;

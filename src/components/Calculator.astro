@@ -1,136 +1,43 @@
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <title>Calculadora</title>
-    <style>
-      div {
-        position: relative;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 125px;
-        display: inline-block;
-        border-radius: 30px;
-        padding: 15px;
-        border: 10px solid #000;
-        background-color: #50a7d9;
-      }
+---
+const Calc = "div";
+---
 
-      input {
-        background-color: #fff;
-      }
-
-      input[type="button"] {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        margin: 5px;
-      }
-
-      tr {
-        display: flex;
-        width: 300px;
-        height: 70px;
-        justify-content: center;
-      }
-
-      input {
-        width: 250px;
-        height: 60px;
-        border-radius: 10px;
-        font-size: 30px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div>
-      <h1 style="text-align: center;color: #fff;font-weight: 600;">
-        Calculadora
-      </h1>
-      <table>
-        <tr>
-          <td><input type="text" id="display" disabled /></td>
-        </tr>
-        <tr>
-          <td><input type="button" value="C" onclick="clearDisplay(); " /></td>
-          <td
-            ><input type="button" value="%" onclick="addToDisplay('%'); " /></td
-          >
-          <td
-            ><input
-              type="button"
-              value="^"
-              onclick="addToDisplay('**'); "
-            /></td
-          >
-          <td><input type="button" value="÷" onclick="addToDisplay('/');"  /></td
-          >
-        </tr>
-        <tr>
-          <td><input type="button" value="7" onclick="addToDisplay('7');"  /></td
-          >
-          <td><input type="button" value="8" onclick="addToDisplay('8');"  /></td
-          >
-          <td><input type="button" value="9" onclick="addToDisplay('9');"  /></td
-          >
-          <td><input type="button" value="*" onclick="addToDisplay('*');"  /></td
-          >
-        </tr>
-        <tr>
-          <td><input type="button" value="4" onclick="addToDisplay('4');"  /></td
-          >
-          <td><input type="button" value="5" onclick="addToDisplay('5');"  /></td
-          >
-          <td><input type="button" value="6" onclick="addToDisplay('6');"  /></td
-          >
-          <td><input type="button" value="-" onclick="addToDisplay('-');"  /></td
-          >
-        </tr>
-        <tr>
-          <td><input type="button" value="1" onclick="addToDisplay('1');"  /></td
-          >
-          <td><input type="button" value="2" onclick="addToDisplay('2');"  /></td
-          >
-          <td><input type="button" value="3" onclick="addToDisplay('3');"  /></td
-          >
-          <td><input type="button" value="+" onclick="addToDisplay('+');"  /></td
-          >
-        </tr>
-        <tr>
-          <td><input type="button" value="0" onclick="addToDisplay('0');"  /></td
-          >
-          <td><input type="button" value="." onclick="addToDisplay('.');"  /></td
-          >
-          <td> <input type="button" value="=" onclick="calculate();"  /></td>
-          <td><input type="button" value="DEL" onclick="clearNumber();" /></td>
-        </tr>
-      </table>
-    </div>
-    <script>
-      function addToDisplay(value) {
-        document.getElementById("display").value += value;
-      }
-
-      function calculate() {
-        try {
-          document.getElementById("display").value = eval(
-            document.getElementById("display").value
-          );
-        } catch (error) {
-          document.getElementById("display").value = "Error";
-        }
-      }
-
-      function clearDisplay() {
-        document.getElementById("display").value = "";
-      }
-
-      function clearNumber() {
-        var display = document.getElementById("display");
-        var valor = display.value;
-        display.value = valor.slice(0, -1);
-      }
-    </script>
-  </body>
-</html>
+<Calc class="calculator">
+  <h1>icon here</h1>
+  <table>
+    <tr>
+      <td><input type="text" id="display" disabled /></td>
+    </tr>
+    <tr>
+      <td><input id="clearAll" type="button" value="C" /></td>
+      <td><input class="number" type="button" value="%" /></td>
+      <td><input class="number" type="button" value="**" /></td>
+      <td><input class="number" type="button" value="/" /></td>
+    </tr>
+    <tr>
+      <td><input class="number" type="button" value="7" /></td>
+      <td><input class="number" type="button" value="8" /></td>
+      <td><input class="number" type="button" value="9" /></td>
+      <td><input class="number" type="button" value="*" /></td>
+    </tr>
+    <tr>
+      <td><input class="number" type="button" value="4" /></td>
+      <td><input class="number" type="button" value="5" /></td>
+      <td><input class="number" type="button" value="6" /></td>
+      <td><input class="number" type="button" value="-" /></td>
+    </tr>
+    <tr>
+      <td><input class="number" type="button" value="1" /></td>
+      <td><input class="number" type="button" value="2" /></td>
+      <td><input class="number" type="button" value="3" /></td>
+      <td><input class="number" type="button" value="+" /></td>
+    </tr>
+    <tr>
+      <td><input class="number" type="button" value="0" /></td>
+      <td><input class="number" type="button" value="." /></td>
+      <td><input id="calculate" type="button" value="=" /></td>
+      <td><input id="clearNumber" type="button" value="DEL" /></td>
+    </tr>
+  </table>
+</Calc>
+<script src="../js/scriptCalc.js"></script>

@@ -1,4 +1,5 @@
 body {
+    transform: scale(97%);
     background-image: url("./img/collage.jpg");
     background-repeat: repeat;
     background-size: 23.75rem;
@@ -12,7 +13,6 @@ body {
     position: relative;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: .3125rem;
     border-radius: 1.875rem;
     padding: .9375rem;
     /* box-shadow: .625rem .625rem .625rem #50a7d9; */
@@ -52,9 +52,9 @@ table {
 
 tr {
     display: flex;
+    justify-content: center;
     width: 18.75rem;
     height: 4.375rem;
-    justify-content: center;
 }
 
 input {
